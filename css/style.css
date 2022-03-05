@@ -1000,6 +1000,20 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  * {
+    cursor: auto;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .follower {
+    display: none;
+  }
+}
+
 @media (max-width: 991.98px) {
   .container {
     max-width: 750px;
