@@ -97,7 +97,9 @@ header .header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .header__item {
@@ -119,7 +121,6 @@ header .header__item.canvas__item {
 }
 
 header .header__item .title {
-  margin-top: 130px;
   font-style: normal;
   font-weight: bold;
   font-size: 78px;
@@ -414,6 +415,8 @@ header .header__item .info__item {
           align-items: center;
   z-index: 2;
   display: none;
+  -webkit-animation: fade 0.3s ease-in-out 0s;
+          animation: fade 0.3s ease-in-out 0s;
 }
 
 .modal__wrapper .modal {
@@ -443,96 +446,12 @@ header .header__item .info__item {
   height: 10px;
 }
 
-.modal__wrapper .modal__body form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .modal__wrapper .modal__body form input {
   margin-top: 35px;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-  padding: 5px 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 170%;
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form input::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form input::-moz-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form input::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form input::placeholder {
-  color: #FFFFFF;
 }
 
 .modal__wrapper .modal__body form textarea {
-  resize: none;
   min-height: 75px;
-  margin-top: 35px;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-  padding: 5px 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 170%;
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form textarea::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form textarea::-moz-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form textarea:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form textarea::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form textarea::placeholder {
-  color: #FFFFFF;
-}
-
-.modal__wrapper .modal__body form button {
-  margin-top: 30px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  color: #FFFFFF;
-  border: none;
-  background: none;
-  outline: none;
 }
 
 .section__reviews .reviews {
@@ -690,84 +609,13 @@ footer .footer__item .form__subtitle {
 
 footer .footer__item .form__input {
   margin-top: 20px;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-  padding: 5px 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 170%;
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__input::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__input::-moz-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__input::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__input::placeholder {
-  color: #FFFFFF;
 }
 
 footer .footer__item .form__textarea {
-  resize: none;
   min-height: 102px;
-  margin-top: 35px;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-  padding: 5px 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 170%;
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__textarea::-webkit-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__textarea::-moz-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__textarea:-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__textarea::-ms-input-placeholder {
-  color: #FFFFFF;
-}
-
-footer .footer__item .form__textarea::placeholder {
-  color: #FFFFFF;
 }
 
 footer .footer__item .form__btn {
-  margin-top: 30px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  color: #FFFFFF;
-  border: none;
-  background: none;
-  outline: none;
   margin-left: auto;
   margin-right: 80px;
 }
@@ -781,6 +629,15 @@ footer .footer__item .form__btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1378EF;
+  border-radius: 5px;
 }
 
 body {
@@ -881,6 +738,98 @@ li {
   line-height: 55px;
   color: #FFFFFF;
   margin-top: 15px;
+}
+
+.section__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 5px 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: #FFFFFF;
+}
+
+.section__input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__input::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+.section__input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__input::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__input::placeholder {
+  color: #FFFFFF;
+}
+
+.section__textarea {
+  resize: none;
+  min-height: 102px;
+  margin-top: 35px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 5px 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: #FFFFFF;
+}
+
+.section__textarea::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__textarea::-moz-placeholder {
+  color: #FFFFFF;
+}
+
+.section__textarea:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__textarea::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.section__textarea::placeholder {
+  color: #FFFFFF;
+}
+
+.section__btn {
+  margin-top: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  border: none;
+  background: none;
+  outline: none;
+  z-index: 1;
 }
 
 section {
