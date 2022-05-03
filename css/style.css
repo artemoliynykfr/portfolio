@@ -268,6 +268,12 @@ header .header__item .info__item {
   display: none;
 }
 
+.tabs__content-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .tabs__content-item .tab__content.left__content {
   max-width: 430px;
   width: 100%;
