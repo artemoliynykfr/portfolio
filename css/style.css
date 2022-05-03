@@ -224,6 +224,7 @@ header .header__item .info__item {
 }
 
 .tabs__header-item {
+  cursor: pointer;
   margin: 30px 20px 0 20px;
   font-style: normal;
   font-weight: normal;
@@ -267,12 +268,6 @@ header .header__item .info__item {
   display: none;
 }
 
-.tabs__content-item.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .tabs__content-item .tab__content.left__content {
   max-width: 430px;
   width: 100%;
@@ -308,6 +303,7 @@ header .header__item .info__item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 
 .accordion__item-trigger .trigger__text {
@@ -395,6 +391,7 @@ header .header__item .info__item {
   text-align: center;
   color: #FFFFFF;
   margin: -108px auto 0;
+  cursor: pointer;
 }
 
 .modal__wrapper {
@@ -1130,12 +1127,12 @@ section {
     z-index: 102;
   }
 
-  .burger.active-burger {
+  .burger.active {
     position: fixed;
     right: 10px;
   }
 
-  .burger.active-burger::before {
+  .burger.active::before {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
@@ -1145,7 +1142,7 @@ section {
     top: 8px;
   }
 
-  .burger.active-burger::after {
+  .burger.active::after {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -1155,7 +1152,7 @@ section {
     bottom: 10px;
   }
 
-  .burger.active-burger span {
+  .burger.active span {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
