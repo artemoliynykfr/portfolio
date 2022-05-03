@@ -224,7 +224,6 @@ header .header__item .info__item {
 }
 
 .tabs__header-item {
-  cursor: pointer;
   margin: 30px 20px 0 20px;
   font-style: normal;
   font-weight: normal;
@@ -309,7 +308,6 @@ header .header__item .info__item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
 }
 
 .accordion__item-trigger .trigger__text {
@@ -397,7 +395,6 @@ header .header__item .info__item {
   text-align: center;
   color: #FFFFFF;
   margin: -108px auto 0;
-  cursor: pointer;
 }
 
 .modal__wrapper {
